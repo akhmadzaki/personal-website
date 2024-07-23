@@ -17,7 +17,10 @@ jobs:
         known_hosts: unnecessary
     
     - name: Adding Known Hosts
-      run: ssh-keyscan ${{ secrets.PERSONAL_VPS_HOST }} >> ~/.ssh/known_hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan ${{ secrets.PERSONAL_VPS_HOST }} > ~/.ssh/known_hosts
+        ssh-keygen -H -F ${{ secrets.PERSONAL_VPS_HOST }} || ssh-keyscan ${{ secrets.PERSONAL_VPS_HOST }} >> ~/.ssh/known_hosts
 
     - name: Deploy file with rsync
       run: rsync -avz ./* ${{ secrets.PERSONAL_VPS_USER }}@${{ secrets.PERSONAL_VPS_HOST }}:/opt/zaki/personal-website

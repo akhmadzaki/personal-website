@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    margin: 20px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+#porto-section {
+    margin: 20px;
+	text-align: center;
+}
+
+#porto-section a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+a:hover {
+    color: blue;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.repo-card {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            background-color: #f6f8fa;
+        }
+        .repo-title {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .repo-title a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .repo-description {
+            margin: 0;
+            color: #586069;
+            font-size: 14px;
+        }

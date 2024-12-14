@@ -18,10 +18,10 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.PERSONAL_VPS_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -p 4224 ${{ secrets.PERSONAL_VPS_HOST }} >> ~/.ssh/known_hosts
+        ssh-keyscan ${{ secrets.PERSONAL_VPS_HOST }} >> ~/.ssh/known_hosts
 
     - name: Copy file to VPS
-      run: scp -i ~/.ssh/id_rsa -P 4224 ./* ${{ secrets.PERSONAL_VPS_USER }}@${{ secrets.PERSONAL_VPS_HOST }}:/opt/zaki/personal-website/
+      run: scp -i ~/.ssh/id_rsa ./* ${{ secrets.PERSONAL_VPS_USER }}@${{ secrets.PERSONAL_VPS_HOST }}:/opt/web/
 
     - name: Cleanup SSH
       run: rm -f ~/.ssh/id_rsa
